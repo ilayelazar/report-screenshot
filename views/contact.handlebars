@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>iProsis Publisher</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>iProsis</span> Web Design</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Acme Web Design</h3>
+      <img width=200px src="https://cdn.pbrd.co/images/HYHM8zP.png">
+      </div>
+      <div class="contact">
+        <h1>Send report via E-mail:</h1>
+        {{msg}}
+        <form method="POST" action="send">
+          <p>
+            <label>Email Address</label>
+            <input value='ilay.elazar@iprosis.com' style='margin: 3px 0;height:22px' type="email" name="email">
+            <span id="emails"></span>
+            <input class='_emails' type="button" value="+" id="addLine" onclick="addline();">
+            </p>
+          <p class="full">
+            <input type="text" style="display:none" value="">
+            <button type="submit" >Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+<script>
+function addline(){
+  document.getElementById("emails").innerHTML += "<input class='_emails' style='margin: 3px 0;height:22px' type='email' name='email'>";
+
+}
+
+</script>
+
+
+</body>
+</html>
